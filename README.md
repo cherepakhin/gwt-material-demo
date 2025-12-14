@@ -81,7 +81,7 @@ Plugin подключается на фазе compile и имеет два ва�
 ![tomcat_for_war.png](doc/tomcat_for_war.png)
 
 Вид в tomcat:
-![tomcated.png](doc/tomcated.png)
+![tomcated_1.png](doc/tomcated_1.png)
 
 #### 3. Использование 
 
