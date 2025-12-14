@@ -1,7 +1,7 @@
 ### Демо использования Google Widget ToolKit (GWT) и компонент Google Material Design (GMD).
 (Use Google Material Design wrapper for GWT)
 
-Использовано [https://github.com/GwtMaterialDesign/gwt-material](https://github.com/GwtMaterialDesign/gwt-material),  
+Большая часть склонировано из [https://github.com/GwtMaterialDesign/gwt-material](https://github.com/GwtMaterialDesign/gwt-material),  
 [https://github.com/tbroyer/gwt-maven-plugin](https://github.com/tbroyer/gwt-maven-plugin).
 
 Лицензия Apache 2.0.
@@ -83,6 +83,8 @@ Plugin подключается на фазе compile и имеет два ва�
 #### 3. Использование 
 
 Открыть [http://v:8080/gwt-material-demo-2.1.1/](http://v:8080/gwt-material-demo-2.1.1/)
+
+![doc/gwt_material_demo_1.png](doc/gwt_material_demo_1.png)
 
 <hr/>
 
