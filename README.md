@@ -76,13 +76,17 @@ Plugin подключается на фазе compile и имеет два ва�
 ````
 
 #### 2. Тестирование
-Для тестов можно открыть в браузере [target/gwt-material-demo-2.1.1/index.html](target/gwt-material-demo-2.1.1/index.html)
-или из target/gwt-material-demo-2.1.1.war (535kB) задеплоить в Tomcat через admin панель:
+Для тестов можно открыть в браузере [target/gwt-material-demo-2.1.1/index.html](target/gwt-material-demo-2.1.1/index.html).
+Или из target/gwt-material-demo-2.1.1.war (535kB) deploy в Tomcat через admin панель:
 ![tomcat_for_war.png](doc/tomcat_for_war.png)
+
+Вид в tomcat:
+![tomcated.png](doc/tomcated.png)
 
 #### 3. Использование 
 
-Открыть [http://v:8080/gwt-material-demo-2.1.1/](http://v:8080/gwt-material-demo-2.1.1/)
+Открыть [http://127.0.0.1:8080/gwt-material-demo-2.1.1/](http://127.0.0.1:8080/gwt-material-demo-2.1.1/)
+[http://v:8080/gwt-material-demo-2.1.1/](http://v:8080/gwt-material-demo-2.1.1/)
 
 ![doc/gwt_material_demo_1.png](doc/gwt_material_demo_1.png)
 
