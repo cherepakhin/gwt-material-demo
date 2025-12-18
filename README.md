@@ -7,8 +7,9 @@
 Лицензия Apache 2.0.
 
 Демо __gwtmaterialdesign__: [https://gwtmaterialdesign.github.io/gmd-core-demo/](https://gwtmaterialdesign.github.io/gmd-core-demo/).
+В [https://gwtmaterialdesign.github.io/gmd-core-demo/](https://gwtmaterialdesign.github.io/gmd-core-demo/)  использована версия Java - 8. 
 
-Изначально использована версия Java - 8. В этом проекте - Java 11:
+В этом проекте - Java 11:
 
 ````shell
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
@@ -19,7 +20,19 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 #### 1. Сборка
 
 ````shell
-./mvnw package
+./mvnw clean package
+````
+
+Log:
+````
+OK (
+...
+Building war: prog/java/gwt/gwt-material-demo/target/gwt-material-demo-2.1.1.war
+...
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 37:36 min
+)
 ````
 
 или
@@ -28,7 +41,20 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 ./mvnw compile war:war
 ````
 
-Для сборки используется [gwt-maven-plugin](https://github.com/tbroyer/gwt-maven-plugin). В pom.xml:
+Для сборки используется [gwt-maven-plugin](https://github.com/tbroyer/gwt-maven-plugin).
+Gwt-maven-plugin подключается на фазе compile и имеет два варианта сборки модулей GWT (packaging): __gwt-lib__ или __gwt-app__.
+Здесь использован вариант: __gwt-app__.
+
+В pom.xml __gwt-app__ указано в __packaging__ :
+
+````xml
+    ....
+    <artifactId>gwt-material-demo</artifactId>
+    <packaging>gwt-app</packaging>
+    ....
+````
+
+Сам plugin подключается так:
 
 ````xml
     <build>
@@ -68,24 +94,26 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 ...
 ````
 
-Plugin подключается на фазе compile и имеет два варианта сборки модулей GWT (packaging): __gwt-lib__ или __gwt-app__. 
-Здесь использован вариант: __gwt-app__. См. в pom.xml:
-
-````xml
-<packaging>gwt-app</packaging>
-````
-
 #### 2. Тестирование
-Для тестов можно открыть в браузере [target/gwt-material-demo-2.1.1/index.html](target/gwt-material-demo-2.1.1/index.html).
-Или из target/gwt-material-demo-2.1.1.war (535kB) deploy в Tomcat через admin панель:
+
+Внешний вид можно посмотреть просто открыв в браузере [target/gwt-material-demo-2.1.1/index.html](target/gwt-material-demo-2.1.1/index.html).
+Работу каких-то компонент можно проверить тут же, н.п. [file:///home/vasi/prog/java/gwt/gwt-material-demo/target/gwt-material-demo-2.1.1/index.html#dialogs](file:///home/vasi/prog/java/gwt/gwt-material-demo/target/gwt-material-demo-2.1.1/index.html#dialogs).
+__Запускать проект не нужно__, т.к. после сборки js файлы будут скомпилированы. 
+Работу java кода тут не проверить, нужно делать deploy в Tomcat.  
+
+Deploy в Tomcat из target/gwt-material-demo-2.1.1.war (535kB) через admin панель:
 ![tomcat_for_war.png](doc/tomcat_for_war.png)
 
 Вид в tomcat:
+[http://v:8080/gwt-material-demo-2.1.1/](http://v:8080/gwt-material-demo-2.1.1/)
+
 ![tomcated_1.png](doc/tomcated_1.png)
 
 #### 3. Использование 
 
-Открыть [http://127.0.0.1:8080/gwt-material-demo-2.1.1/](http://127.0.0.1:8080/gwt-material-demo-2.1.1/)
+После deploy в Tomcat, открыть [http://127.0.0.1:8080/gwt-material-demo-2.1.1/](http://127.0.0.1:8080/gwt-material-demo-2.1.1/) ,
+где 127.0.0.1:8080 адрес Tomcat.
+
 [http://v:8080/gwt-material-demo-2.1.1/](http://v:8080/gwt-material-demo-2.1.1/)
 
 ![doc/gwt_material_demo_1.png](doc/gwt_material_demo_1.png)
