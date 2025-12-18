@@ -33,8 +33,8 @@ public class ContentPushEvent extends GwtEvent<ContentPushEvent.ContentPushHandl
 
     public static final Type<ContentPushHandler> TYPE = new Type<>();
 
-
-    public ContentPushEvent() {}
+    public ContentPushEvent() {
+    }
 
     public static void fire(HasHandlers source) {
         source.fireEvent(new ContentPushEvent());
