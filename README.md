@@ -90,6 +90,7 @@ Plugin подключается на фазе compile и имеет два ва�
 
 ![doc/gwt_material_demo_1.png](doc/gwt_material_demo_1.png)
 
+
 <hr/>
 
 ## Readme автора
